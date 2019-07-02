@@ -14,7 +14,7 @@
 
 (install-package 'rust-mode)
 (install-package 'racer)
-;;(install-package 'company-racer)
+(install-package 'company-racer)
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
