@@ -1,3 +1,6 @@
+;;-------------------------------------
+;; init default
+;;-------------------------------------
 
 (global-linum-mode t)
 (column-number-mode t)
@@ -28,8 +31,15 @@
 
 
 ;;------------ default directory ------------;;
-(setq default-directory "D:/")
-(setq command-line-default-directory "D:/")
+;; Windows
+(when (string-equal system-type "windows-nt")
+  (setq default-directory "D:/")
+  (setq command-line-default-directory "D:/"))
+
+;; Linux
+(when (string-equal system-type "gnu/linux")
+  (setq default-directory "~/")
+  (setq command-line-default-directory "~/"))
 
 ;;----------------- TAB width ---------------;;
 (setq-default tab-width 4)
