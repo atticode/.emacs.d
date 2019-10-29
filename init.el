@@ -13,7 +13,7 @@
 ;; tools
 (require 'init-company)
 (require 'init-ido)
-(require 'init-lsp)
+;;(require 'init-lsp)
 (require 'init-magit)
 
 ;; markup language

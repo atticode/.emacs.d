@@ -7,8 +7,15 @@
 (electric-pair-mode t)
 (show-paren-mode t)
 (tool-bar-mode 0)
-;;(setq menu-bar-mode nil) 
-;;(setq scroll-bar-mode nil) 
+;;(setq menu-bar-mode nil)
+;;(setq scroll-bar-mode nil)
+
+;;remove alert-bell  
+;;(mouse-wheel-mode t)
+;;开启语法高亮  
+;;(global-font-lock-mode 1)  
+;;高亮显示区域选择  
+;;(transient-mark-mode t)
 
 ;;(display-time-mode t)
 ;;(setq-default display-time-24hr-format t)
@@ -59,10 +66,12 @@
 (setq visible-bell t)
 ;; default major mode
 ;; (setq default-major-mode 'text-mode)
-;; frame title format
-(setq frame-title-format "emacs@%b")
+;; frame title format --> %f 缓冲区完整路径; %b 文件名; %p 页面百分数; %l 行号;
+(setq frame-title-format "%f")
 ;; 80 column
 (setq default-fill-column 80)
+;; line height
+;; (setq default-line-spaceing 4)
 ;; search match case
 (setq case-fold-search nil)
 ;;
@@ -75,18 +84,24 @@
 ;;------------------ UTF-8 ------------------;;
 (prefer-coding-system 'utf-8)
 (set-buffer-file-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
+;;(set-language-environment "UTF-8")
 ;;(setq current-language-environment "UTF-8")
 ;;(setq locale-coding-system 'utf-8)
 ;;(set-keyboard-coding-system 'utf-8)
 ;;(set-terminal-coding-system 'utf-8)
+;;(set-clipboard-coding-system 'utf-8)
+;;(modify-coding-system-alist 'process "*" 'utf-8)
+
 
 ;;------------ window position --------------;;
 (set-frame-position (selected-frame) 500 10)
 (set-frame-width (selected-frame) 120)
 (set-frame-height (selected-frame) 32)
 
-
+;;设置删除记录  
+;;(setq kill-ring-max 200)
 
 ;; https://www.emacswiki.org/emacs/FillColumnIndicator
 ;;(add-hook 'after-init-hook 'fci-mode)
