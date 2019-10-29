@@ -47,6 +47,7 @@
 (require 'init-scss)
 (require 'init-sass)
 (require 'init-emmet)
+(require 'init-vue)
 
 ;; docker
 (require 'init-docker)

@@ -1,6 +1,7 @@
 ;; html
 
 ;; http://web-mode.org/
+;; https://github.com/fxbois/web-mode
 
 (install-package 'web-mode)
 (install-package 'company-web)
