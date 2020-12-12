@@ -8,6 +8,7 @@
 ;; https://github.com/nsf/gocode
 ;; https://github.com/rogpeppe/godef
 
+;; https://github.com/golang/tools/blob/master/gopls/README.md
 
 (install-package 'go-mode)
 (install-package 'company-go)
