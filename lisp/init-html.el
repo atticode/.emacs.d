@@ -19,6 +19,9 @@
             (setq web-mode-style-padding 2)
             (setq tab-width 2)
             (setq default-tab-width 2)
+            (setq css-indent-offset 2)
+            (setq javascript-indent-level 2)
+            (setq js-indent-level 2)
             (setq indent-tabs-mode nil)))
 
 

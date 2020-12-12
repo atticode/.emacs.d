@@ -60,6 +60,8 @@
 (setq-default make-backup-files nil)
 ;; no startup message
 (setq inhibit-startup-message t)
+;; 关闭启动页面
+(setq inhibit-splash-screen t)
 ;; new line
 (setq-default require-final-newline t)
 ;; no bell

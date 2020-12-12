@@ -55,4 +55,15 @@
 ;;------------------------------------- gruvbox ----------------------------------;;
 ;; https://github.com/greduan/emacs-theme-gruvbox
 
+
+
+;; 设置背景色
+;;(set-background-color "black")
+;; 设置前景色
+;;(set-foreground-color "white")
+;; 设置区域前景色
+;;(set-face-background 'region "blue")
+;; 设置区域背景色
+;;(set-face-background 'region "blue")
+
 (provide 'init-theme)
