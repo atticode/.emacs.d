@@ -28,8 +28,9 @@
 		  (lambda ()
             (racer-mode t)
             (company-racer t)
-            (setq tab-width 4)
-            (setq default-tab-width 4)
+            (setq rust-indent-offset 2)
+            (setq tab-width 2)
+            (setq default-tab-width 2)
             (setq indent-tabs-mode nil)))
 
 (provide 'init-rust)

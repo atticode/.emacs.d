@@ -49,8 +49,8 @@
   (setq command-line-default-directory "~/"))
 
 ;;----------------- TAB width ---------------;;
-(setq-default tab-width 4)
-(setq-default default-tab-width 4)
+(setq-default tab-width 2)
+(setq-default default-tab-width 2)
 ;; Tab to Whitespace
 (setq-default indent-tabs-mode nil)
 ;; Tab not to Whitespace
