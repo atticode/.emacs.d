@@ -48,6 +48,11 @@
   (setq default-directory "~/")
   (setq command-line-default-directory "~/"))
 
+;; MacOS
+(when (string-equal system-type "drawin")
+  (setq default-directory "~/")
+  (setq command-line-default-directory "~/"))
+
 ;;----------------- TAB width ---------------;;
 (setq-default tab-width 2)
 (setq-default default-tab-width 2)
