@@ -4,13 +4,17 @@
 
 (install-package 'php-mode)
 (install-package 'ac-php)
-;;(install-package 'company-php)
+(install-package 'company-php)
 
 (require 'php-mode)
 
 (add-hook 'php-mode-hook
           '(lambda ()
 
+             ;; Enable company-mode
+             (company-mode t)
+             (require 'company-php)
+             
              ;; Enable ElDoc support (optional)
              (ac-php-core-eldoc-setup)
 

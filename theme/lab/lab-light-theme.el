@@ -76,12 +76,12 @@
    `(mode-line-inactive ((t (:background ,color-ultralight
                              :foreground ,color-fg))))
    `(fringe ((t (:background ,color-bg))))
-   `(minibuffer-prompt ((t (:slant italic :foreground ,color-middle))))
+   `(minibuffer-prompt ((t (:inherit italic :foreground ,color-middle))))
    `(font-lock-builtin-face ((t (:foreground ,color-middle))))
-   `(font-lock-comment-face ((t (:slant italic :foreground ,color-bad))))
-   `(font-lock-constant-face ((t (:slant italic :foreground ,color-middle))))
+   `(font-lock-comment-face ((t (:inherit italic :foreground ,color-bad))))
+   `(font-lock-constant-face ((t (:inherit italic :foreground ,color-middle))))
    `(font-lock-function-name-face ((t (:foreground ,color-dark-purple))))
-   `(font-lock-keyword-face ((t (:foreground ,color-middle :slant italic))))
+   `(font-lock-keyword-face ((t (:foreground ,color-middle :inherit italic))))
    `(font-lock-string-face ((t (:foreground ,color-dark-cyan))))
    `(font-lock-type-face ((t (:foreground ,color-dark-green))))
    `(font-lock-variable-name-face ((t (:foreground ,color-dark-blue))))
@@ -101,6 +101,7 @@
                               :foreground ,color-bg))))
    `(highlight ((t (:inverse-video nil :background ,color-ultralight))))
    `(hl-line ((t (:inverse-video nil :background ,color-ultralight))))
+   `(widget-field ((t (:background ,color-bad))))
 
    ;; Faces for specific prog modes
    `(sh-heredoc ((t (:foreground nil :inherit font-lock-string-face))))
@@ -132,7 +133,7 @@
    `(erc-input-face ((t (:foreground ,color-dark-yellow))))
    `(erc-prompt-face ((t (:foreground ,color-middle
                           :background nil
-                          :slant italic
+                          :inherit italic
                           :weight unspecified))))
    `(erc-my-nick-face ((t (:foreground ,color-dark-yellow))))
    `(erc-pal-face ((t (:foreground ,color-dark-cyan))))
@@ -195,7 +196,7 @@
    `(sml/discharging ((t (:foreground ,color-dark-red))))
    `(sml/read-only ((t (:foreground ,color-dark-green))))
    `(sml/filename ((t (:foreground ,color-dark-blue :weight bold))))
-   `(sml/prefix ((t (:foreground ,color-dark-purple :weight normal :slant italic))))
+   `(sml/prefix ((t (:foreground ,color-dark-purple :weight normal :inherit italic))))
    `(sml/modes ((t (:foreground ,color-fg :weight bold))))
    `(sml/modified ((t (:foreground ,color-dark-red))))
    `(sml/outside-modified ((t (:foreground ,color-bg :background ,color-dark-red))))
@@ -204,7 +205,7 @@
    ;; Helm
    `(helm-candidate-number ((t (:foreground ,color-fg :background nil))))
    `(helm-source-header ((t (:foreground ,color-bg :background ,color-blue
-                                         :weight normal :slant italic))))
+                                         :weight normal :inherit italic))))
    `(helm-selection ((t (:inherit region :distant-foreground nil :background nil))))
    `(helm-prefarg ((t (:foreground ,color-dark-red))))
    `(helm-ff-directory ((t (:foreground ,color-dark-blue))))
@@ -254,7 +255,7 @@
    `(outline-4 ((t (:foreground ,color-dark-cyan))))
    `(outline-5 ((t (:foreground ,color-dark-yellow))))
    `(outline-6 ((t (:foreground ,color-fg))))
-   `(outline-7 ((t (:foreground ,color-fg :slant italic))))
+   `(outline-7 ((t (:foreground ,color-fg :inherit italic))))
    `(outline-8 ((t (:foreground ,color-middle))))
 
    ;; Org-mode
@@ -268,6 +269,10 @@
    `(org-verbatim ((t (:foreground ,color-middle))))
    `(org-mode-line-clock ((t (:background nil))))
    `(org-document-title ((t (:weight normal :foreground nil))))
+
+   ;; org-tree-slide
+   `(org-tree-slide-header-overlay-face
+     ((t (:inherit font-lock-comment-face :foreground nil :background nil))))
 
    ;; Message
    `(message-header-name ((t (:foreground ,color-bad))))
@@ -293,6 +298,15 @@
    `(compilation-error ((t (:foreground ,color-dark-red))))
    `(compilation-info ((t (:foreground ,color-dark-green))))
    `(compilation-warning ((t (:foreground ,color-dark-yellow))))
+
+   ;; Highlight-indent-guides
+   `(highlight-indent-guides-odd-face ((t (:background ,color-ultralight))))
+   `(highlight-indent-guides-even-face ((t (:background nil))))
+
+   ;; Telega
+   `(telega-msg-heading ((t (:background nil :foreground ,color-green :inherit nil))))
+   `(telega-msg-inline-reply ((t (:foreground ,color-bad :inherit nil))))
+   `(telega-entity-type-texturl ((t (:inherit nil :foreground ,color-blue))))
    ))
 
 (provide-theme 'lab-light)
